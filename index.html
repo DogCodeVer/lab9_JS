@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<label for="story">Количество слов в тексте:</label>
+
+<textarea id="story" name="story"
+          rows="5" cols="33">
+</textarea>
+<h1>Слов в тексте</h1>
+<input type="text" name="count" id="count" disabled>
+<input type="button" value="124" onclick="countWord()">
+
+<a href="zad2.html"></a>
+<script>
+    function countWord() {
+        text = document.getElementById('story').value
+        count = text.split(' ')
+        document.getElementById('count').value = count.length;
+    }
+
+</script>
+</body>
+</html>

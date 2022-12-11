@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea id="story" name="story"
+          rows="15" cols="68" disabled>Он стоял неподвижно уже четыре часа, не шевелясь и не моргая. Он смотрел на нее. Она смотрела на него. Они смотрели друг другу в глаза так долго, что казалось, будто прошла вечность. Но это было не время, а лишь их чувства. Их чувства, которые были намного глубже, чем время. В них была жизнь, которую они не могли потерять. Жизнь, в которой они были вместе. И эта жизнь была их жизнью. Все остальное было лишь иллюзией, всего лишь сном. А он был сном, который стал явью. Что-то изменилось в нем, в ней. Да, и она тоже изменилась.
+</textarea>
+<div class="replace">
+  <p>Слово:</p>
+  <input type="text" id="wordA">
+  <p>заменить на слово</p>
+  <input type="text" id="wordB">
+</div>
+<input type="button" value="ЗАМЕНИТЬ" onclick="replaceWord(document.getElementById('wordA').value,document.getElementById('wordB').value)">
+<a href="zad3.html"></a>
+</body>
+<script>
+  function replaceWord(wordA,wordB) {
+    text = document.getElementById('story').value;
+    console.log(text)
+    for(i=0;i<text.length;i++){
+      text=text.replace(wordA+" ",wordB+" ")
+      text=text.replace(wordA=wordA.toLowerCase()+" ",wordB+" ")
+    }
+    document.getElementById('story').value=text;
+  }
+</script>
+</html>
